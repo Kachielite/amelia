@@ -2,6 +2,11 @@
 
 This is a mobile chatbot application powered by the **Google Gemini API**. It's built with **Expo React Native** and styled with **NativeWind**.
 
+## App Screenshots
+
+<img width="856" alt="image" src="https://github.com/Kachielite/amelia/assets/40024356/18119d2d-9deb-4b12-987a-51e5d5672ef1">
+
+
 ## Features
 
 - **Chat Conversation**: Engage in interactive conversations with the chatbot.
