@@ -1,4 +1,4 @@
-# Chatbot Mobile App
+# Amelia AI ChatBot App
 
 This is a mobile chatbot application powered by the **Google Gemini API**. It's built with **Expo React Native** and styled with **NativeWind**.
 
@@ -51,6 +51,3 @@ This is a mobile chatbot application powered by the **Google Gemini API**. It's 
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-MIT
