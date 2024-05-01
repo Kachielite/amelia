@@ -23,6 +23,12 @@ const AuthLayout = () => {
                         headerShown: false
                     }}
                 />
+                <Stack.Screen
+                    name='complete-profile'
+                    options={{
+                        headerShown: false
+                    }}
+                />
             </Stack>
             <StatusBar backgroundColor="#181A20" style="light" />
         </>

@@ -8,7 +8,7 @@ const Field = ({name, placeholder, icon, value, handleChangeText}) => {
     return(
         <View className="flex flex-col justify-start items-start space-y-[10px] border-b-[1px] border-secondary w-full mb-[24px]">
             <Text className="text-white font-ubold text-[16px]">{name}</Text>
-            <View className="w-full flex flex-row justify-between  px-[10px] py-[12.5px]">
+            <View className="w-full flex flex-row justify-between py-[12.5px]">
                 <TextInput
                     placeholder={placeholder}
                     placeholderTextColor="#35383F"

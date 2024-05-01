@@ -15,32 +15,35 @@ const SignIn = () => {
         <SafeAreaView className="bg-primary h-full">
             <View className="py-[16px] px-[24px] flex flex-col justify-between items-start h-full w-[100vw] ">
                 <BackButton/>
-                <View className="flex flex-col justify-between items-start space-y-[32px]">
+                <View className="flex flex-col justify-between items-start space-y-[32px] border-b-[1px] border-dark">
                     <View className="flex flex-col justify-start items-start space-y-[16px]">
-                        <Text className="text-white text-[32px] font-ubold">Hello there 👋</Text>
-                        <Text className="text-white text-[18px] font-uregular">Please enter your email & password to create an account.</Text>
+                        <Text className="text-white text-[32px] font-ubold">Welcome Back 👋</Text>
+                        <Text className="text-white text-[18px] font-uregular">Please enter your email & password to log in.</Text>
                     </View>
-                    <View className="flex flex-col justify-start items-start space-y-[20px]">
+                    <View className="flex flex-col justify-start items-start space-y-[16px]">
                         <Field placeholder="Email" name="Email" icon={icons.email}/>
                         <Field placeholder="Password" name="Password" icon={icons.email}/>
-                        <View className="w-full flex flex-row justify-start items-center space-x-[14px] border-b-[1px] border-dark pb-[44px]">
+                        <View className="w-full flex flex-row justify-start items-center space-x-[14px] pb-[44px]">
                             <Checkbox
                                 value={checked}
                                 onValueChange={setChecked}
                                 color={checked ? '#17CE92' : undefined}
                                 className="border-[3px] rounded-[8px] border-secondary w-[24px] h-[24px]"
                             />
-                            <View className="flex flex-row justify-start items-center space-x-[15px]">
-                                <Text className="text-white text-[16px] font-usemibold">I agree to AmeliaAI <Text className="text-secondary text-[16px] font-usemibold">Public Agreement, Terms, & Privacy Policy.</Text></Text>
+                            <View className="flex flex-row justify-start items-center space-x-[10px]">
+                                <Text className="text-white text-[16px] font-usemibold">Remember me</Text>
                             </View>
                         </View>
                     </View>
                 </View>
                 <View className="w-full flex flex-row justify-center items-center space-x-[8px]">
-                    <Text className="text-white text-[16px] font-usemibold">Already have an account?</Text>
-                    <TouchableOpacity onPress={() => router.push('/sign-up')} className="text-secondary text-[16px] font-usemibold"><Text className="text-secondary text-[16px] font-usemibold">Log in</Text></TouchableOpacity>
+                    <TouchableOpacity className="text-secondary text-[16px] font-usemibold"><Text className="text-secondary text-[16px] font-usemibold">Forgot Password</Text></TouchableOpacity>
                 </View>
-                <Button label="Continue"/>
+                <View className="w-full flex flex-row justify-center items-center space-x-[8px]">
+                    <Text className="text-white text-[16px] font-usemibold">Don’t have an account?</Text>
+                    <TouchableOpacity onPress={() => router.push('/sign-up')} className="text-secondary text-[16px] font-usemibold"><Text className="text-secondary text-[16px] font-usemibold">Sign up</Text></TouchableOpacity>
+                </View>
+                <Button label="Log in" />
             </View>
         </SafeAreaView>
     )
