@@ -1,6 +1,8 @@
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
+import AuthProvider from "../context/authContext";
+import { ToastProvider } from 'react-native-toast-notifications'
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -30,9 +32,13 @@ export default function Layout() {
   }
 
   return (
-    <Stack className="bg-primary">
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-    </Stack>
+      <AuthProvider>
+        <ToastProvider>
+          <Stack className="bg-primary">
+            <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+          </Stack>
+        </ToastProvider>
+      </AuthProvider>
   );
 }

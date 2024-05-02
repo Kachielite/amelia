@@ -16,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "platform": "com.derrick.amelia"
     },
     "android": {
       "adaptiveIcon": {

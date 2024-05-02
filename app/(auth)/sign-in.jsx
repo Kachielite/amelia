@@ -8,11 +8,14 @@ import {icons} from '../../constants'
 import Button from "../../components/button";
 import {router} from "expo-router";
 import {useState} from "react";
+import ModalComponent from "../../components/modal";
 
 const SignIn = () => {
     const [checked, setChecked] = useState(false);
+    const [showModal,setShowModal] = useState(false);
     return(
         <SafeAreaView className="bg-primary h-full">
+            <ModalComponent isVisible={showModal} title="Log in Successful!"/>
             <View className="py-[16px] px-[24px] flex flex-col justify-between items-start h-full w-[100vw] ">
                 <BackButton/>
                 <View className="flex flex-col justify-between items-start space-y-[32px] border-b-[1px] border-dark">
@@ -43,7 +46,7 @@ const SignIn = () => {
                     <Text className="text-white text-[16px] font-usemibold">Don’t have an account?</Text>
                     <TouchableOpacity onPress={() => router.push('/sign-up')} className="text-secondary text-[16px] font-usemibold"><Text className="text-secondary text-[16px] font-usemibold">Sign up</Text></TouchableOpacity>
                 </View>
-                <Button label="Log in" />
+                <Button label="Log in" onPress={() => setShowModal(true)}/>
             </View>
         </SafeAreaView>
     )

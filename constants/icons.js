@@ -7,5 +7,17 @@ import edit from '../assets/icons/edit.png';
 import phone from '../assets/icons/phone.png';
 import chevrondown from '../assets/icons/chevrondown.png';
 import calendar from '../assets/icons/calendar.png';
+import success from '../assets/icons/success.png'
 
-export default {BackIcon, eye, eyeHide, email, profile, edit, phone, chevrondown, calendar}
+export default {
+    BackIcon,
+    eye,
+    eyeHide,
+    email,
+    profile,
+    edit,
+    phone,
+    chevrondown,
+    calendar,
+    success
+}

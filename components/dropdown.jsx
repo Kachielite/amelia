@@ -5,12 +5,11 @@ import {Image, Text, View, StyleSheet} from "react-native";
 
 import {icons} from "../constants";
 
-const GenderOption = () => {
+const GenderOption = ({formik}) => {
     const data = [
         {value: "male", label: "Male"},
         {value: "female", label: "Female"}
     ]
-    const [selectedGender, setSelectedGender] = useState("Male")
     return(
         <View className="flex flex-col justify-start items-start space-y-[10px] border-b-[1px] border-secondary w-full mb-[24px]">
             <Text className="text-white font-ubold text-[16px]">Gender</Text>
@@ -30,9 +29,10 @@ const GenderOption = () => {
                     labelField="label"
                     valueField="value"
                     onChange={item => {
-                        setSelectedGender(item.value);
+                        formik.setFieldValue("gender", item.value);
                     }}
-                    value={selectedGender}
+                    onBlur={() => formik.handleBlur('gender') }
+                    value={formik.values.gender}
                     className="w-[100%] text-white text-[18px] font-usemibold placeholder:text-[#35383F]"
                 />
                 <Image source={icons.chevrondown} resizeMode="contain" className="h-[20px] w-[20px] absolute z-40 right-0 top-5"/>
