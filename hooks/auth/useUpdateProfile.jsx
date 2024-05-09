@@ -21,41 +21,38 @@ const useUpdateProfile = () => {
             dob: moment()
         },
         onSubmit: async (values) => {
-            setShowModal(true)
+            setShowModal(true);
             try {
-                const profileImage = await storeFile(values.profile_image, user.email);
-                try{
-                     await updateUser(
+                const fileResponse = await storeFile(values.profile_image);
+                if (fileResponse?.name) {
+                    await updateUser(
                         user.$id,
                         values.full_name,
-                        profileImage,
+                        fileResponse.name,
                         values.phone_number,
                         values.gender,
                         values.dob
                     );
-                    router.push('/welcome')
-                } catch (e) {
-                    throw e;
+                    router.push('/welcome');
+                } else {
+                    throw new Error("File upload failed or response invalid");
                 }
-
             } catch (error) {
-                console.error(error.message)
-                toast.show("Something wrong happened!!", {
+                console.error("Submission error:", error);
+                toast.show("Something went wrong during submission", {
                     type: "danger",
                     placement: "bottom",
                     duration: 4000,
                     offset: 30,
                     animationType: "slide-in",
-                })
+                });
             } finally {
                 setShowModal(false);
-
             }
-        },
+        }
+,
     });
 
-
-    console.info("values", formik.values.gender)
 
     return {formik, showModal,}
 }

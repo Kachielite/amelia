@@ -1,4 +1,4 @@
-import {View, Image, Text} from "react-native";
+import {View, Image, Text, ActivityIndicator} from "react-native";
 import Modal from "react-native-modal";
 
 import {icons} from '../constants'
@@ -22,6 +22,13 @@ const ModalComponent = ({title, isVisible}) => {
                         <View className="flex flex-col items-center">
                             <Text className="text-white font-uregular text-[16px]">Please wait...</Text>
                             <Text className="text-white font-uregular text-[16px]">You will be directed to the homepage.</Text>
+                        </View>
+                        <View className="w-full flex justify-center items-center pt-10">
+                            <ActivityIndicator
+                                animating={true}
+                                color="#17CE92"
+                                size="large"
+                            />
                         </View>
                     </View>
                 </View>

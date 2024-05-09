@@ -27,7 +27,6 @@ const DatePicker = ({formik}) => {
         hideDatePicker();
     };
 
-    console.log("date", selectedDate)
     return (
         <View className="flex flex-col justify-start items-start space-y-[10px] border-b-[1px] border-secondary w-full mb-[24px]">
             <Text className="text-white font-ubold text-[16px]">Date of birth</Text>
