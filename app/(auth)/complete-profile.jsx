@@ -9,6 +9,7 @@ import Dropdown from "../../components/dropdown";
 import DatePicker from "../../components/date-picker";
 import ModalComponent from "../../components/modal";
 import useUpdateProfile from "../../hooks/auth/useUpdateProfile";
+import {router} from "expo-router";
 
 const CompleteProfile = () => {
     const {formik, showModal} = useUpdateProfile();
@@ -34,7 +35,7 @@ const CompleteProfile = () => {
                 </ScrollView>
                 <View className="w-full flex flex-row justify-between items-center pt-[24px] pb-[36px] border-t-[1px] border-dark">
                     <View className="w-[46%]">
-                        <Button label="Skip" type="primary"/>
+                        <Button label="Skip" type="primary" onPress={() => router.push('/chat')}/>
                     </View>
                     <View className="w-[46%]">
                         <Button label="Continue" onPress={() => formik.handleSubmit()} />

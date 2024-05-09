@@ -37,6 +37,7 @@ export default function Layout() {
           <Stack className="bg-primary">
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           </Stack>
         </ToastProvider>
       </AuthProvider>

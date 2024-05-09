@@ -7,7 +7,11 @@ import edit from '../assets/icons/edit.png';
 import phone from '../assets/icons/phone.png';
 import chevrondown from '../assets/icons/chevrondown.png';
 import calendar from '../assets/icons/calendar.png';
-import success from '../assets/icons/success.png'
+import success from '../assets/icons/success.png';
+import chat from '../assets/icons/chat.png';
+import assistance from '../assets/icons/assistance.png';
+import history from '../assets/icons/history.png';
+import account from '../assets/icons/account.png'
 
 export default {
     BackIcon,
@@ -19,5 +23,9 @@ export default {
     phone,
     chevrondown,
     calendar,
-    success
+    success,
+    chat,
+    account,
+    assistance,
+    history
 }

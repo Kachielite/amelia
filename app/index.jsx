@@ -12,7 +12,7 @@ import {useEffect} from "react";
 export default function App() {
     const {isLoading, isLoggedIn,} = useAuthContext();
 
-    if (!isLoading && isLoggedIn) return <Redirect href="/complete-profile" />;
+    if (!isLoading && isLoggedIn) return <Redirect href="/chat" />;
 
     const completingOnboarding = async () => {
         await AsyncStorage.setItem('isFirstTimeOpen', 'false');
@@ -23,12 +23,13 @@ export default function App() {
         async function checkFirstTimer() {
             const isFirstTimeOpen = await AsyncStorage.getItem("isFirstTimeOpen");
             if (isFirstTimeOpen === 'false') {
-                router.push("/complete-profile")
+                router.push("/welcome")
             }
         }
         checkFirstTimer();
 
     }, []);
+
   return (
     <SafeAreaView className="bg-[#181A20] h-full flex justify-start">
         <Onboarding
